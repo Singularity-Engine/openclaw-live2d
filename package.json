@@ -1,10 +1,10 @@
 {
-  "name": "open-llm-vtuber",
-  "version": "1.2.1",
-  "description": "An Electron application with React and TypeScript",
+  "name": "openclaw-live2d",
+  "version": "1.0.0",
+  "description": "Give your AI a face — Live2D Companion with Memory & Affinity System",
   "main": "./out/main/index.js",
-  "author": "example.com",
-  "homepage": "https://electron-vite.org",
+  "author": "sngxai <contact@sngxai.com>",
+  "homepage": "https://github.com/Singularity-Engine/openclaw-live2d",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",

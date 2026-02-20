@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: open-llm-vtuber-electron
+appId: com.sngxai.openclaw-live2d
+productName: OpenClaw Live2D
 directories:
   buildResources: resources
   output: release/${version}
@@ -16,7 +16,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: open-llm-vtuber-electron
+  executableName: openclaw-live2d
   icon: resources/icon.ico
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
@@ -37,14 +37,14 @@ mac:
     - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
   notarize: false
 dmg:
-  artifactName: ${name}-${version}.${ext}
+  artifactName: ${name}-${version}-${arch}.${ext}
   writeUpdateInfo: false
 linux:
   target:
     - AppImage
     - snap
     - deb
-  maintainer: electronjs.org
+  maintainer: sngxai.com
   category: Utility
 appImage:
   artifactName: ${name}-${version}.${ext}
