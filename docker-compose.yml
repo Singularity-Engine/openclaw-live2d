@@ -1,0 +1,26 @@
+services:
+  open-llm-vtuber-web:
+    image: qdyqszr-web:latest
+    container_name: open-llm-vtuber-web
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env.local
+    networks:
+      - appnet
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3001"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+
+
+networks:
+  appnet:
+    external: true
+    name: mcp_appnet

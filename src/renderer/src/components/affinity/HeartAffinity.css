@@ -1,0 +1,329 @@
+.heart-affinity-display {
+  position: fixed;
+  top: 44px;
+  right: 44px;
+  width: auto;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 1;
+  background: transparent;
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+}
+
+/* 移除hover效果 */
+.heart-affinity-display:hover {
+  /* hover效果已移除 */
+}
+
+.heart-affinity-value {
+  width: 27px;
+  height: 23px;
+  color: white;
+  font-family: "Lexend Zetta", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 信号状态图标样式 */
+.heart-affinity-display .signal-icon {
+  width: 16px !important;
+  height: 16px !important;
+  opacity: 1;
+  flex-shrink: 0;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  transition: all 0.2s ease;
+  z-index: 9999 !important;
+  position: relative;
+}
+
+.heart-affinity-display .signal-icon:hover {
+  opacity: 0.8 !important;
+  transform: scale(1.1) !important;
+  cursor: pointer !important;
+}
+
+/* 更高优先级的CSS选择器 */
+img.signal-icon {
+  cursor: pointer !important;
+}
+
+/* 最高优先级 */
+.heart-affinity-display img.signal-icon {
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+/* 心形图片/视频样式 */
+.heart-icon {
+  max-width: 30px;
+  max-height: 30px;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  flex-shrink: 0;
+  object-fit: contain;
+  animation: continuousHeartbeat 1.5s infinite ease-in-out;
+  transform-origin: center;
+}
+
+/* 心形视频特定样式 */
+video.heart-icon {
+  background: transparent !important;
+  background-color: transparent !important;
+  mix-blend-mode: normal;
+  pointer-events: none; /* 禁用鼠标交互 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 禁用视频的浏览器控件 */
+video.heart-icon::-webkit-media-controls {
+  display: none !important;
+}
+
+video.heart-icon::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+/* 持续心跳动画 */
+@keyframes continuousHeartbeat {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(var(--heartbeat-scale, 1.1));
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--heartbeat-scale, 1.1));
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 原有的心跳动画（保留给特殊触发事件） */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.15);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+.heart-beat {
+  animation: heartbeat 1.5s infinite;
+  transform-origin: center;
+}
+
+/* 里程碑通知 — 庆祝风格 */
+.milestone-notification {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(139, 92, 246, 0.9);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  margin-top: 10px;
+  animation: milestoneSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+
+@keyframes milestoneSlideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* 表情通知 */
+.expression-notification {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  animation: fadeIn 0.2s ease-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px); /* Safari支持 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.intensity {
+  margin-left: 8px;
+  color: #ffd43b;
+  text-shadow: 0 0 5px rgba(255, 212, 59, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* 好感度上升动画容器 */
+.affinity-up-animation {
+  position: absolute;
+  top: 30px;
+  left: 50%; /* 从20%增加到30%，往右移动 */
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 1000;
+  width: 180px;
+  height: 180px;
+}
+
+/* love动画样式 */
+.love-animation {
+  animation: loveRise 3s ease-out forwards;
+}
+
+/* love动画视频特定样式 */
+video.love-animation {
+  background: transparent !important;
+  background-color: transparent !important;
+  mix-blend-mode: normal;
+  pointer-events: none; /* 禁用鼠标交互 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 禁用爱心动画视频的浏览器控件 */
+video.love-animation::-webkit-media-controls {
+  display: none !important;
+}
+
+video.love-animation::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+/* love上升动画 */
+@keyframes loveRise {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(0.8);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-20px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.2);
+  }
+}
+
+/* 数字变化动画容器 */
+.affinity-number-change {
+  position: absolute;
+  top: 20%;
+  left: 88%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 1001;
+  font-family: "Lexend Zetta", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  animation: numberRise 3s ease-out forwards;
+  white-space: nowrap;
+}
+
+/* 好感度上升样式 */
+.affinity-number-change.increase {
+  color: #40c057;
+  text-shadow:
+    0 0 10px rgba(64, 192, 87, 0.8),
+    0 0 20px rgba(64, 192, 87, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 好感度下降样式 */
+.affinity-number-change.decrease {
+  color: #fa5252;
+  text-shadow:
+    0 0 10px rgba(250, 82, 82, 0.8),
+    0 0 20px rgba(250, 82, 82, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 数字上升动画 */
+@keyframes numberRise {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1.2);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-40px) scale(0.8);
+  }
+}

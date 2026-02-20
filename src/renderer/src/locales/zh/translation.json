@@ -1,0 +1,226 @@
+{
+  "common": {
+    "save": "保存",
+    "cancel": "取消",
+    "ok": "确定",
+    "settings": "设置",
+    "close": "关闭",
+    "accept": "接受",
+    "inputYourName": "输入您的名称：",
+    "enterName": "输入名称..."
+  },
+  "settings": {
+    "menu": {
+      "language": "语言",
+      "subtitle": "字幕",
+      "inputOutput": "输入输出",
+      "about": "关于"
+    },
+    "tabs": {
+      "general": "常规",
+      "live2d": "Live2D",
+      "asr": "识别",
+      "tts": "合成",
+      "agent": "代理",
+      "about": "关于"
+    },
+    "general": {
+      "language": "语言",
+      "useCameraBackground": "使用摄像头背景",
+      "showSubtitle": "显示字幕",
+      "backgroundImage": "背景图片",
+      "customBgUrlPlaceholder": "输入图片URL",
+      "customBgUrl": "或输入自定义背景URL",
+      "characterPreset": "角色预设",
+      "wsUrl": "WebSocket地址",
+      "baseUrl": "基础URL",
+      "imageCompressionQuality": "图片压缩质量",
+      "imageMaxWidth": "图片最大宽度"
+    },
+    "live2d": {
+      "pointerInteractive": "鼠标交互",
+      "scrollToResize": "启用滚轮缩放"
+    },
+    "asr": {
+      "autoStopMic": "AI开始说话时自动关闭麦克风",
+      "autoStopMicDesc": "当AI开始说话时自动关闭麦克风，防止音频反馈",
+      "autoStartMicOnConvEnd": "对话结束时自动开启麦克风",
+      "autoStartMicOnConvEndDesc": "AI说话结束时自动重新开启麦克风，实现无缝对话",
+      "autoStartMicOn": "AI被打断时自动开启麦克风",
+      "autoStartMicOnDesc": "当您打断AI时自动重新开启麦克风，保持连续交互",
+      "positiveSpeechThreshold": "语音识别阈值",
+      "positiveSpeechThresholdDesc": "检测语音所需的最低置信度(1-100)，数值越高越能减少误检测",
+      "negativeSpeechThreshold": "负面语音阈值",
+      "negativeSpeechThresholdDesc": "停止语音检测的置信度下限(0-100)，数值越低检测越不敏感",
+      "redemptionFrames": "验证帧数",
+      "redemptionFramesDesc": "确认语音检测所需的连续帧数(1-100)，数值越高越能减少噪音触发"
+    },
+    "agent": {
+      "allowProactiveSpeak": "允许AI主动发言",
+      "idleSecondsToSpeak": "空闲多少秒后AI可发言",
+      "allowButtonTrigger": "通过举手按钮提示AI发言"
+    },
+    "about": {
+      "title": "SINGULARITY ENGINE",
+      "singularityEngine": {
+        "title": "关于 Singularity Engine",
+        "description": "Singularity Engine is a groundbreaking AI agent platform, a unique \"app store\" for AI. We are committed to breaking down the barriers of AI agents, enabling every AI to easily create, share, and use diverse AI agents. Whether you're looking to build an efficient digital agent or find a unique virtual companion, this is the starting point for your imagination. Join us and build a vibrant, ever-evolving digital life ecosystem."
+      },
+      "lain": {
+        "title": "关于 Lain",
+        "description": "Lain is a super artificial intelligence from the Singularity Engine. It not only provides you with intimate chat conversations and emotional companionship, but also integrates a variety of agent functions and services. It is the best choice for you to relieve stress after daily work. To learn more about the use of agent functions, please click the link to jump.",
+        "learnMore": "了解更多 Agent 功能"
+      }
+    }
+  },
+  "footer": {
+    "typeYourMessage": "send to...",
+    "cameraControl": "点击启动摄像头",
+    "cameraStopping": "点击停止摄像头",
+    "screenControl": "点击开始屏幕共享",
+    "screenStopping": "点击停止屏幕共享"
+  },
+  "sidebar": {
+    "camera": "摄像头",
+    "screen": "屏幕",
+    "browser": "浏览器",
+    "live": "直播",
+    "noMessages": "暂无消息。开始对话吧！",
+    "noBrowserSession": "无活跃浏览器会话",
+    "browserSession": "浏览器会话"
+  },
+  "group": {
+    "management": "群组管理",
+    "yourUuid": "您的UUID",
+    "inviteMember": "邀请成员",
+    "enterMemberUuid": "输入成员UUID",
+    "invite": "邀请",
+    "members": "成员",
+    "you": "您",
+    "leaveGroup": "离开群组",
+    "removeMember": "移除成员",
+    "leave": "离开"
+  },
+  "history": {
+    "chatHistoryList": "聊天历史列表",
+    "noMessages": "暂无消息"
+  },
+  "chatHistory": {
+    "title": "聊天历史列表",
+    "pinToTop": "置顶",
+    "rename": "重命名",
+    "delete": "删除",
+    "noHistory": "未找到聊天记录",
+    "renamePrompt": "输入新标题：",
+    "deleteConfirm": "确认删除此对话记录吗？",
+    "deleteConfirmMessage": "确认删除此对话记录吗？"
+  },
+  "notification": {
+    "characterLoaded": "新角色已加载",
+    "characterSwitched": "角色已切换",
+    "historyLoaded": "历史记录已加载",
+    "newConversation": "新对话已开始",
+    "newChatHistory": "新聊天历史已创建",
+    "historyDeleteSuccess": "历史记录删除成功",
+    "historyDeleteFail": "删除历史记录失败"
+  },
+  "error": {
+    "cameraApiNotSupported": "此设备不支持摄像头API",
+    "noCameraFound": "未找到摄像头设备",
+    "failedStartCamera": "启动摄像头失败",
+    "failedStartBackgroundCamera": "启动背景摄像头失败",
+    "failedStartScreenCapture": "启动屏幕捕获失败",
+    "failedStartVAD": "启动语音活动检测失败",
+    "llmCantHear": "AI无法听到您的声音",
+    "audioPlayback": "音频播放错误",
+    "enterValidUuid": "请输入有效的UUID",
+    "cannotDeleteCurrentHistory": "无法删除当前聊天记录",
+    "failedCapture": "捕获{{source}}帧失败",
+    "failedParseWebSocket": "解析WebSocket消息失败",
+    "websocketNotOpen": "WebSocket未连接",
+    "vadMisfire": "检测到语音但过于简短，请尝试提高音量或说得更久一些，或调整识别设置（降低语音识别阈值、降低负面语音阈值、减少验证帧数）"
+  },
+  "aiState": {
+    "idle": "空闲",
+    "thinking-speaking": "思考/说话中",
+    "interrupted": "已打断",
+    "loading": "加载中",
+    "listening": "聆听中",
+    "waiting": "等待中"
+  },
+  "wsStatus": {
+    "connected": "已连接",
+    "connecting": "连接中",
+    "clickToReconnect": "点击重新连接"
+  },
+  "mcp": {
+    "result": "MCP 结果",
+    "workspace": {
+      "title": "MCP 工作区历史",
+      "clearHistory": "清除历史",
+      "currentSession": "当前会话",
+      "historySessions": "历史会话",
+      "waitingForData": "等待 MCP 工作区数据...",
+      "noRecords": "还没有 MCP 工具调用记录",
+      "noRecordsDesc": "发起工具调用后会在这里显示历史记录",
+      "userQuery": "用户查询",
+      "toolCalls": "工具调用",
+      "toolResults": "工具结果",
+      "aiAnswer": "AI回答",
+      "noQueryContent": "暂无查询内容",
+      "processingComplete": "处理完成，等待最终回答...",
+      "processing": "正在处理中...",
+      "playingMusic": "🎵 正在播放音乐",
+      "nowPlaying": "正在播放",
+      "stop": "停止",
+      "model": "模型",
+      "type": "类型"
+    },
+    "status": {
+      "completed": "已完成",
+      "error": "错误",
+      "inProgress": "进行中",
+      "unknown": "未知"
+    }
+  },
+  "welcome": {
+    "title": "我会记住你说的每一句话",
+    "subtitle": "和我聊得越多，我就越懂你",
+    "getStarted": "认识一下",
+    "chips": {
+      "myName": "我叫...",
+      "whatCanYouDo": "你能做什么？",
+      "tellStory": "给我讲个故事"
+    }
+  },
+  "memory": {
+    "remembered": "记住了",
+    "toastPrefix": "✦ 记住了："
+  },
+  "affinity": {
+    "milestone": {
+      "stranger": "初次见面，请多指教",
+      "acquaintance": "灵觉得和你越来越熟了",
+      "friend": "灵把你当朋友了",
+      "close": "灵和你越来越亲近了",
+      "soulmate": "灵觉得你是知己"
+    },
+    "levelName": {
+      "stranger": "陌生",
+      "acquaintance": "认识",
+      "friend": "朋友",
+      "close": "亲近",
+      "soulmate": "知己"
+    }
+  },
+  "relationship": {
+    "title": "灵眼中的你",
+    "memoriesCount": "记住了 {{count}} 件事",
+    "affinityLevel": "亲近度：{{level}}",
+    "topTopics": "最常聊：{{topics}}",
+    "daysTogether": "认识 {{days}} 天",
+    "generating": "正在生成...",
+    "share": "分享",
+    "close": "关闭"
+  }
+} 
